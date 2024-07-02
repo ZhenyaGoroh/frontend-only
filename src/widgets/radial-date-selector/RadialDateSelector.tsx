@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
-const CircleLayout = () => {
+const RadialDateSelector = () => {
   return (
     <div
       style={{
@@ -18,4 +18,4 @@ const CircleLayout = () => {
   );
 };
 
-export default CircleLayout;
+export default RadialDateSelector;
