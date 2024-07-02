@@ -16,16 +16,16 @@ export const selectItemsData: SelectItemData[] = [
         index: 3,
         label: "Игры",
     },
-    {
-        index: 4,
-        label: "Кино",
-    },
-    {
-        index: 5,
-        label: "Спорт",
-    },
-    {
-        index: 6,
-        label: "Работа",
-    }
+    // {
+    //     index: 4,
+    //     label: "Кино",
+    // },
+    // {
+    //     index: 5,
+    //     label: "Спорт",
+    // },
+    // {
+    //     index: 6,
+    //     label: "Работа",
+    // }
 ]

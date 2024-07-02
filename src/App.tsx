@@ -1,10 +1,10 @@
 import React from "react";
-import RadialDateSelector from "./widgets/radial-date-selector/RadialDateSelector";
+import RadialDateSelect from "./widgets/radial-date-select/RadialDateSelect";
 
 const App = () => {
   return (
     <div>
-      <RadialDateSelector />
+      <RadialDateSelect />
     </div>
   );
 };

@@ -1,8 +1,7 @@
 import React from "react";
 import "./style.scss";
 
-export interface SelectItemProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface SelectItemProps extends React.HTMLAttributes<HTMLDivElement> {
   isActive?: boolean;
   rotationAngle: number;
   cords: { x: number; y: number };
@@ -32,12 +31,12 @@ const SelectItem = ({
         top: cords.y,
         transform: "translate(-50%, -50%) rotate(-" + rotationAngle + "deg)",
       }}
-      data-active={isHovered}
+      data-active={isActive || isHovered }
       className="item"
       {...rest}
     >
-      {isHovered && index}
-      {isHovered && <div className="item__label">{label}</div>}
+      {isActive && index || isHovered && index}
+      {isActive && <div className="item__label">{label}</div>}
     </div>
   );
 };
