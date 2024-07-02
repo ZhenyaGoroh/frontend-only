@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./style.scss";
 const CircleLayout = () => {
   return (
     <div
@@ -11,7 +11,7 @@ const CircleLayout = () => {
         rotate: "30deg",
       }}
     >
-      <h1 style={{ position: "absolute", rotate: "-30deg" }}>
+      <h1 className="red" style={{ position: "absolute", rotate: "-30deg" }}>
         Radial Date Selector
       </h1>
     </div>
