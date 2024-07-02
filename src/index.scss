@@ -6,4 +6,10 @@ html, body{
     padding: 0;
     color: #42567A;
     background-color: #F4F5F9;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2{
+    margin: 0;
 }

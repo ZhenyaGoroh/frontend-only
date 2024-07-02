@@ -13,6 +13,9 @@ export default function useRadialDateSelect({
   center,
   radius,
 }: UseRadialDateSelect) {
+
+    console.log(radius);
+    
   const itemsAmount = selectItemsData.length;
 
   const [activeIndex, setActiveIndex] = useState(1);
@@ -22,8 +25,8 @@ export default function useRadialDateSelect({
   useEffect(() => {
     const items = Array.from({ length: itemsAmount }, (_, index) => {
       const angle = (((index * 360) / itemsAmount) * Math.PI) / 180;
-      const x = center.x + radius * Math.cos(angle);
-      const y = center.y + radius * Math.sin(angle);
+      const x = radius + radius * Math.cos(angle);
+      const y = radius + radius * Math.sin(angle);
       return { x, y, angle };
     });
     setItemsData(

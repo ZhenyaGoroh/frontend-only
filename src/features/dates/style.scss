@@ -1,0 +1,21 @@
+.dates {
+  display: flex;
+  gap: 100px;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &__item {
+    font-weight: 700;
+    font-size: 200px;
+
+    &_purple{
+        color: #5D5FEF;
+    }
+    &_pink{
+        color: #EF5DA8;
+    }
+  }
+}

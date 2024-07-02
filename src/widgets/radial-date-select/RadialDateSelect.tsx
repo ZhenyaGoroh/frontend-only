@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./style.scss";
-import { SelectItem } from "../../features";
+import { Dates, SelectItem } from "../../features";
 import { selectItemsData } from "../../entities";
 import useCalculateCenter from "./hooks/useCalculateCenter";
 import useRadialDateSelect from "./hooks/useRadialDateSelect";
@@ -16,8 +16,12 @@ const RadialDateSelect = () => {
     selectItemsData,
   });
 
+  console.log(center);
+  
+
   return (
     <div className="selector">
+      <Dates firstDate={2003} secondDate={2005} />
       <div
         style={{ transform: `rotate(${rotation}deg)` }}
         className="selector__circle"
