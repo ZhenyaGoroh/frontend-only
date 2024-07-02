@@ -1,0 +1,12 @@
+
+.controls{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__buttons{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}

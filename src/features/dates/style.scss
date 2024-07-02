@@ -3,9 +3,9 @@
   gap: 100px;
   width: 100%;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 3rem;
+  z-index: 1;
+  position: relative;
 
   &__item {
     font-weight: 700;

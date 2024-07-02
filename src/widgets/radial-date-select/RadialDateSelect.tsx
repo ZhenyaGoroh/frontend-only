@@ -21,7 +21,6 @@ const RadialDateSelect = () => {
 
   return (
     <div className="selector">
-      <Dates firstDate={2003} secondDate={2005} />
       <div
         style={{ transform: `rotate(${rotation}deg)` }}
         className="selector__circle"
