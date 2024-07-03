@@ -1,15 +1,16 @@
 import React from "react";
 import "./style.scss"
+import { useAtom } from "jotai";
+import { appatom } from "../../atom";
+import { getTimePeriodByIndex } from "../../entities/time-period/tools";
+import { timePeriodData } from "../../entities/time-period/constants";
 
-interface DatesProps {
-  firstDate: number;
-  secondDate: number;
-}
-
-const Dates = ({ firstDate, secondDate }: DatesProps) => {
+const Dates = () => {
+  const [activeIndex] = useAtom(appatom);
+  
   return <div className="dates">
-    <h2 className="dates__item dates__item_purple">{firstDate}</h2>
-    <h2 className="dates__item dates__item_pink">{secondDate}</h2>
+    <h2 className="dates__item dates__item_purple">{getTimePeriodByIndex(activeIndex, timePeriodData)[0]}</h2>
+    <h2 className="dates__item dates__item_pink">{getTimePeriodByIndex(activeIndex, timePeriodData)[1]}</h2>
   </div>;
 };
 

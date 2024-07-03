@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useCallback, useState } from "react";
 import RadialDateSelect from "./widgets/radial-date-select/RadialDateSelect";
 import "./style.scss";
 import "swiper/css";
@@ -6,6 +6,11 @@ import "swiper/css/navigation";
 import { Dates } from "./features";
 import Controls from "./features/controls/Controls";
 import Slider from "./widgets/slider/Slider";
+import { timePeriodData } from "./entities/time-period/constants";
+import {
+  getSlidesDataByIndex,
+  getTimePeriodByIndex,
+} from "./entities/time-period/tools";
 
 const App = () => {
   return (
@@ -16,16 +21,11 @@ const App = () => {
           <br />
           даты
         </h1>
-        <Dates firstDate={2003} secondDate={2005} />
+        <Dates />
         <RadialDateSelect />
-        <Controls
-          currentIndex={1}
-          total={2}
-          onNext={() => {}}
-          onPrev={() => {}}
-        />
+        <Controls />
       </div>
-      <Slider slidesData={[{content: "1", title: "1"}, {content: "2", title: "2"}, {content: "3", title: "3"}, {content: "1", title: "1"}, {content: "1", title: "1"}]}/>
+      <Slider />
     </div>
   );
 };

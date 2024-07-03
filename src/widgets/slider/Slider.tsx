@@ -5,12 +5,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Slide from "../../features/slide/Slide";
+import { appatom } from "../../atom";
+import { useAtom } from "jotai";
+import { getSlidesDataByIndex } from "../../entities/time-period/tools";
+import { timePeriodData } from "../../entities/time-period/constants";
 
-interface SliderProps {
-  slidesData: { title: string; content: string }[];
-}
+const Slider = () => {
+  const [activeIndex] = useAtom(appatom);
 
-const Slider = ({slidesData}: SliderProps) => {
+  const slidesData = getSlidesDataByIndex(activeIndex, timePeriodData);
+
   return (
     <Swiper
       spaceBetween={80}

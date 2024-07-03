@@ -11,7 +11,7 @@ const ControlsButton = ({
   children,
   ...rest
 }: ControlsButtonProps) => {
-  return <button {...rest} className="controls__button">{children}</button>;
+  return <button {...rest} onClick={onClick} className="controls__button">{children}</button>;
 };
 
 export default ControlsButton;

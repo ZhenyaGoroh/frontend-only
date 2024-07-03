@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
 import { SelectItemData } from "../../../entities/select-items/constants";
 import { SelectItemProps } from "../../../features/select-item/SelectItem";
+import { useAtom } from "jotai";
+import { appatom } from "../../../atom";
 
 interface UseRadialDateSelect {
   selectItemsData: SelectItemData[];
   center: { x: number; y: number };
   radius: number;
+  onClick?: (index: number) => void;
 }
 
 export default function useRadialDateSelect({
   selectItemsData,
   center,
   radius,
+  onClick
 }: UseRadialDateSelect) {
-
-    console.log(radius);
     
   const itemsAmount = selectItemsData.length;
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useAtom(appatom);
   const [rotation, setRotation] = useState(0);
   const [itemsData, setItemsData] = useState<SelectItemProps[]>([]);
 
@@ -36,6 +38,7 @@ export default function useRadialDateSelect({
         isActive: index + 1 === activeIndex,
         rotationAngle: rotation,
         onClick: () => {
+          onClick?.(index + 1);
           setActiveIndex(index + 1);
           setRotation(360 - (360 / itemsAmount) * index); //TODO: fix rotation on first click
         },
