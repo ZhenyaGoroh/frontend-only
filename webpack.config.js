@@ -30,6 +30,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/, // Targets all CSS files
+        use: ['style-loader', 'css-loader'] // Applies these loaders to any CSS file
+      },
+      {
         test: /\.svg$/,
         loader: "svg-inline-loader",
       },

@@ -1,52 +1,53 @@
 .container {
-    width: 1400px;
-    margin-left: 320px;
-    margin-right: 160px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-inline: 1px solid #E3E6ED;
-    position: relative;
-    &::before{
-        content: "";
-        width: 1px;
-        height: 100%;
-        background-color: #E3E6ED;
-        position: absolute;
-        left: 50%;
-        top: 0;
-    }
+  width: 1400px;
+  margin-left: 320px;
+  margin-right: 160px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-inline: 1px solid #e3e6ed;
+  position: relative;
+  &::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #e3e6ed;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
 }
 
-.select__wrapper{
-    box-sizing: border-box;
-    padding-top: 170px;
-    height: 100vh;
-    &::before{
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: #E3E6ED;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        z-index: 0;
-    }
+.select__wrapper {
+  box-sizing: border-box;
+  padding-top: 170px;
+//   height: 100vh;
+  padding-left: 78px;
+  margin-bottom: 56px;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e3e6ed;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 0;
+  }
 }
 
-.title{
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 62px;
-    padding-left: 78px;
-    position: relative;
-    margin: 0;
-    &::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 5px;
-        height: 100%;
-        background-image: linear-gradient(to bottom, #3877EE, #EF5DA8);
-    }
+.title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 62px;
+  position: relative;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -78px;
+    width: 5px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #3877ee, #ef5da8);
+  }
 }
